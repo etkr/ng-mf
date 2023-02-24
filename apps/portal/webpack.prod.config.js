@@ -1,4 +1,4 @@
-const { withModuleFederation } = require('@nrwl/angular/module-federation');
+const {withModuleFederation} = require('@nrwl/angular/module-federation');
 const config = require('./module-federation.config');
 module.exports = withModuleFederation({
   ...config,
@@ -12,4 +12,8 @@ module.exports = withModuleFederation({
    *   ['app2', 'https://app2.example.com'],
    * ]
    */
+
+  remotes: [
+    ['snake', 'https://wonderful-ocean-01475d203.2.azurestaticapps.net']
+  ]
 });

@@ -15,7 +15,7 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/snake/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/snake/src/favicon.ico", "apps/snake/src/assets"],
+        "assets": ["apps/snake/src/favicon.ico", "apps/snake/src/assets","apps/snake/src/staticwebapp.config.json"],
         "styles": ["apps/snake/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {

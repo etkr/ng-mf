@@ -1,7 +1,14 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'ng-mf-snake-entry',
-  template: `<ng-mf-snake-game></ng-mf-snake-game>`,
+  templateUrl: './entry.component.html',
 })
-export class RemoteEntryComponent {}
+export class RemoteEntryComponent {
+
+  public state: boolean = false
+
+  updateState($event: boolean) {
+    this.state = $event
+  }
+}

@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Output, ViewChild} from '@angular/core';
 import {NgxSnakeComponent} from "ngx-snake";
 
 @Component({
@@ -8,6 +8,10 @@ import {NgxSnakeComponent} from "ngx-snake";
 })
 export class SnakeGameComponent {
 
+
+  @Output()
+  public stateChanged = new EventEmitter<boolean>();
+
   @ViewChild(NgxSnakeComponent)
   private game!: NgxSnakeComponent;
 
@@ -16,10 +20,12 @@ export class SnakeGameComponent {
   public start() {
     this.started = true
     this.game.actionStart()
+    this.stateChanged.emit(this.started)
   }
 
   public pause() {
     this.started = false
     this.game.actionStop()
+    this.stateChanged.emit(this.started)
   }
 }

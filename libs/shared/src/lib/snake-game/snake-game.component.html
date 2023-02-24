@@ -1,0 +1,28 @@
+<div class="container">
+  <ngx-snake #game></ngx-snake>
+  <div>
+    <ng-container [ngSwitch]="started">
+      <button *ngSwitchCase="false" mat-icon-button color="primary" (click)="start() ">
+        <mat-icon>play_circle</mat-icon>
+      </button>
+      <button *ngSwitchCase="true" mat-icon-button (click)="pause()">
+        <mat-icon>not_started</mat-icon>
+      </button>
+    </ng-container>
+    <button mat-icon-button (click)="game.actionReset()">
+      <mat-icon>restart_alt</mat-icon>
+    </button>
+    <button mat-icon-button (click)="game.actionUp()">
+      <mat-icon>keyboard_arrow_up</mat-icon>
+    </button>
+    <button mat-icon-button (click)="game.actionLeft()">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <button mat-icon-button (click)="game.actionRight()">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+    <button mat-icon-button (click)="game.actionDown()">
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+  </div>
+</div>

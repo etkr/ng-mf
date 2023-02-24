@@ -9,6 +9,6 @@ import { VersionComponent } from './version/version.component';
 @NgModule({
   imports: [CommonModule, NgxSnakeModule, MatButtonModule, MatIconModule],
   declarations: [SnakeGameComponent, VersionComponent],
-  exports: [SnakeGameComponent],
+  exports: [SnakeGameComponent, VersionComponent],
 })
 export class SharedModule {}

@@ -8,16 +8,18 @@ import {StartComponent} from './start/start.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
+import {SharedModule} from "@ng-mf/shared";
 
 @NgModule({
   declarations: [AppComponent, StartComponent],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(appRoutes, {initialNavigation: 'enabledBlocking'}),
-    MatToolbarModule,
-    MatCardModule,
-    MatButtonModule,
-  ],
+    imports: [
+        BrowserModule,
+        RouterModule.forRoot(appRoutes, {initialNavigation: 'enabledBlocking'}),
+        MatToolbarModule,
+        MatCardModule,
+        MatButtonModule,
+        SharedModule,
+    ],
   providers: [],
   bootstrap: [AppComponent],
 })

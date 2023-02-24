@@ -1,0 +1,6 @@
+﻿{
+  "globalHeaders": {
+    "Access-Control-Allow-Origin": "https://wonderful-ocean-01475d203.2.azurestaticapps.net",
+    "Access-Control-Allow-Methods": "POST, GET, OPTIONS"
+  }
+}

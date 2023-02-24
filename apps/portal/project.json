@@ -21,7 +21,8 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/portal/src/favicon.ico",
-          "apps/portal/src/assets"
+          "apps/portal/src/assets",
+          "apps/portal/src/staticwebapp.config.json"
         ],
         "styles": [
           "apps/portal/src/styles.scss"

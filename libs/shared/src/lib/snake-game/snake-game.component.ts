@@ -11,15 +11,14 @@ export class SnakeGameComponent {
   @ViewChild(NgxSnakeComponent)
   private game!: NgxSnakeComponent;
 
-  started = false
+  public started = false
 
-  start() {
+  public start() {
     this.started = true
     this.game.actionStart()
   }
 
-
-  pause() {
+  public pause() {
     this.started = false
     this.game.actionStop()
   }

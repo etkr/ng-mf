@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./version.component.scss'],
 })
 export class VersionComponent {
-  readonly version = '1.0.0'
+  public readonly version = '1.0.1'
 }

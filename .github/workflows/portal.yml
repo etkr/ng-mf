@@ -1,12 +1,12 @@
-on: 
+on:
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'Log level'     
+        description: 'Log level'
         required: true
         default: 'warning'
       tags:
-        description: 'Test scenario tags' 
+        description: 'Test scenario tags'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,8 +17,9 @@ jobs:
       with:
         node-version: 16
     - run: npm ci
-    - run: npx nx build portal
-    - name: Azure Static Web Apps Deploy
+    - name: Build
+      run: npx nx build portal
+    - name: Deploy
       uses: Azure/static-web-apps-deploy@v1
       with:
         azure_static_web_apps_api_token: ${{ secrets.PORTAL_STATIC_WEB_APP_TOKEN }}

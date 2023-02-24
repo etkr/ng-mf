@@ -17,8 +17,9 @@ jobs:
       with:
         node-version: 16
     - run: npm ci
-    - run: npx nx build snake
-    - name: Azure Static Web Apps Deploy
+    - name: Build
+      run: npx nx build snake
+    - name: Deploy
       uses: Azure/static-web-apps-deploy@v1
       with:
         azure_static_web_apps_api_token: ${{ secrets.SNAKE_STATIC_WEB_APP_TOKEN }}

@@ -10,7 +10,7 @@ export class SnakeGameComponent {
 
 
   @Output()
-  public stateChanged = new EventEmitter<boolean>();
+  public mystateChanged = new EventEmitter<boolean>();
 
   @ViewChild(NgxSnakeComponent)
   private game!: NgxSnakeComponent;
@@ -20,12 +20,12 @@ export class SnakeGameComponent {
   public start() {
     this.started = true
     this.game.actionStart()
-    this.stateChanged.emit(this.started)
+    this.mystateChanged.emit(this.started)
   }
 
   public pause() {
     this.started = false
     this.game.actionStop()
-    this.stateChanged.emit(this.started)
+    this.mystateChanged.emit(this.started)
   }
 }

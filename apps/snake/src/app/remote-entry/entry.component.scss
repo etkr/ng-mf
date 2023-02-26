@@ -1,0 +1,18 @@
+
+
+.snake {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    
+    align-items: stretch;
+
+    &-game {
+        flex-grow: 1;
+    }
+
+    &-version {
+        align-self: flex-end;
+    }
+
+}

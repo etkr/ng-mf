@@ -1,14 +1,8 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'ng-mf-snake-entry',
   templateUrl: './entry.component.html',
+  styleUrls: ['./entry.component.scss'],
 })
-export class RemoteEntryComponent {
-
-  public state: boolean = false
-
-  updateState($event: boolean) {
-    this.state = $event
-  }
-}
+export class RemoteEntryComponent {}

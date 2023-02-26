@@ -9,12 +9,9 @@
             "request": "launch",
             "type": "chrome",
             "url": "http://localhost:4200",
-            "webRoot": "${workspaceFolder:portal}",
+            "webRoot": "${workspaceFolder}",
             "sourceMaps": true,
-            "sourceMapPathOverrides": {
-                "webpack://@${workspaceFolderBasename:remote}/*": "${workspaceFolder:remote}/packages/*",
-                "webpack://${workspaceFolderBasename:portal}/*": "${workspaceFolder:portal}/*"
-            }
+      
         },
         {
             "name": "Launch via NPM",

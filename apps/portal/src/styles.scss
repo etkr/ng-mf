@@ -1,10 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
-
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@use '@angular/material' as mat;
 
 
-body, html {
-  margin: 0;
-  padding: 0;
+
+@use "inter-ui/default" with (
+  $inter-font-display: swap,
+  $inter-font-path: '~inter-ui/Inter (web)'
+);
+@use "inter-ui/variable" with (
+  $inter-font-display: swap,
+  $inter-font-path: '~inter-ui/Inter (web)'
+);
+
+@include default.all;
+@include variable.all;
+@include mat.core();
+
+
+
+$typography: mat.define-typography-config(
+  $font-family: 'Inter',
+);
+
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$blue-grey-palette),
+      accent: mat.define-palette(mat.$pink-palette),
+    ),
+    // Only include `typography` and `density` in the default dark theme.
+    typography: $typography,
+    density: 0,
+  )
+);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$indigo-palette),
+      accent: mat.define-palette(mat.$pink-palette),
+    ),
+    typography: $typography,
+    density: 0,
+  )
+);
+
+@media (prefers-color-scheme: dark) {
+  .theme::after {
+    content: 'dark';
+  }
+  @include mat.all-component-themes($dark-theme);
+}
+
+@media (prefers-color-scheme: light) {
+  .theme::after {
+    content: 'light';
+  }
+  @include mat.all-component-themes($light-theme);
+}
+
+body,
+html {
   height: 100%;
+  margin: 0;
+  font-family: "Inter Var", "system-ui"; 
 }

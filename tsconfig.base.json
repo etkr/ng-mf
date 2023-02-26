@@ -16,7 +16,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ng-mf/shared": ["libs/shared/src/index.ts"]
+      "@ng-mf/shared": ["libs/shared/src/index.ts"],
+      "@ng-mf/snake/feature": ["libs/snake/feature/src/index.ts"],
+      "@ng-mf/snake/shell": ["libs/snake/shell/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
